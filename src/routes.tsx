@@ -45,10 +45,6 @@ const Error = Loadable(lazy(() => import("./pages/404")));
 // routes
 const routes = [
   {
-    path: "/",
-    element: <Navigate to="dashboard" />,
-  },
-  {
     path: "login",
     element: (
       <GuestGuard>
@@ -65,7 +61,7 @@ const routes = [
     ),
   },
   {
-    path: "dashboard",
+    path: "/",
     element: (
       <AuthGuard>
         <DashboardLayout />
@@ -77,7 +73,7 @@ const routes = [
         element: <DashboardSaaS />,
       },
       {
-        path: "user-profile",
+        path: "profile",
         element: <UserProfile />,
       },
 
@@ -86,12 +82,12 @@ const routes = [
         element: <UserList />,
       },
       {
-        path: "apartment-grid",
+        path: "apartments",
         element: <ApartmentGrid />,
       },
       {
-        path: "reservations",
-        element: <ReservationGrid apartmentId={"1"}/>,
+        path: "apartments/:apartmentId/reservations/",
+        element: <ReservationGrid />,
       },
       {
         path: "add-user",

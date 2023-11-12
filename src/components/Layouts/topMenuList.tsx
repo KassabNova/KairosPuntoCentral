@@ -4,18 +4,18 @@ const index = [
   {
     title: "Dashboard",
     Icon: Icons.DashboardIcon,
-    path: "/dashboard",
+    path: "/apartments",
   },
   {
     title: "Perfil de Usuario",
     Icon: Icons.UserProfileIcon,
-    path: "/dashboard/user-profile",
+    path: "/profile",
   },
-  {
-    title: "Apartamentos",
-    Icon: Icons.UserGridIcon,
-    path: "/dashboard/apartment-grid",
-  },
+  // {
+  //   title: "Apartamentos",
+  //   Icon: Icons.UserGridIcon,
+  //   path: "/apartments/",
+  // },
   {
     title: "Login",
     Icon: Icons.LoginIcon,

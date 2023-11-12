@@ -1,16 +1,18 @@
 import { Box, Grid } from "@mui/material";
 import useTitle from "hooks/useTitle";
 import {FC, useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import ReservationCard, {Reservation} from "../../components/reservationManagement/ReservationCard";
 
 export interface ReservationGridProps {
   apartmentId: string;
 }
 
-const ReservationGrid: FC<ReservationGridProps> = ({apartmentId}) => {
+const ReservationGrid: FC = () => {
   // change navbar title
   useTitle("Reservaciones");
+  const { apartmentId } = useParams();
+
 
   const navigate = useNavigate();
   const handleAddApar = () => navigate("/dashboard/add-user");
