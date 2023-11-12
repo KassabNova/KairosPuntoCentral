@@ -7,35 +7,20 @@ const index = [
     path: "/dashboard",
   },
   {
-    title: "User Profile",
+    title: "Perfil de Usuario",
     Icon: Icons.UserProfileIcon,
     path: "/dashboard/user-profile",
   },
   {
-    title: "User Grid",
+    title: "Apartamentos",
     Icon: Icons.UserGridIcon,
-    path: "/dashboard/user-grid",
-  },
-  {
-    title: "User List",
-    Icon: Icons.UserManagementIcon,
-    path: "/dashboard/user-list",
-  },
-  {
-    title: "Add user",
-    Icon: Icons.AddUserIcon,
-    path: "/dashboard/add-user",
+    path: "/dashboard/apartment-grid",
   },
   {
     title: "Login",
     Icon: Icons.LoginIcon,
     path: "/login",
-  },
-  {
-    title: "Register",
-    Icon: Icons.SessionsIcon,
-    path: "/Register",
-  },
+  }
 ];
 
 export default index;

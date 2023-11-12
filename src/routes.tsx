@@ -4,6 +4,7 @@ import DashboardLayout from "components/Layouts/DashboardLayout";
 import LoadingScreen from "components/LoadingScreen";
 import { FC, lazy, LazyExoticComponent, Suspense } from "react";
 import { Navigate } from "react-router-dom";
+import ReservationGrid from "./pages/reservations/ReservationGrid";
 
 const Loadable = (Component: LazyExoticComponent<FC>) => (props: any) =>
   (
@@ -31,8 +32,8 @@ const UserProfile = Loadable(lazy(() => import("./pages/UserProfile")));
 const UserList = Loadable(
   lazy(() => import("./pages/userManagement/UserList"))
 );
-const UserGrid = Loadable(
-  lazy(() => import("./pages/userManagement/UserGrid"))
+const ApartmentGrid = Loadable(
+  lazy(() => import("./pages/apartmentManagement/ApartmentGrid"))
 );
 const AddNewUser = Loadable(
   lazy(() => import("./pages/userManagement/AddNewUser"))
@@ -52,14 +53,6 @@ const routes = [
     element: (
       <GuestGuard>
         <Login />
-      </GuestGuard>
-    ),
-  },
-  {
-    path: "register",
-    element: (
-      <GuestGuard>
-        <Register />
       </GuestGuard>
     ),
   },
@@ -93,8 +86,12 @@ const routes = [
         element: <UserList />,
       },
       {
-        path: "user-grid",
-        element: <UserGrid />,
+        path: "apartment-grid",
+        element: <ApartmentGrid />,
+      },
+      {
+        path: "reservations",
+        element: <ReservationGrid apartmentId={"1"}/>,
       },
       {
         path: "add-user",

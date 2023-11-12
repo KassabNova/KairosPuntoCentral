@@ -23,12 +23,12 @@ const StyledFlexBox = styled(FlexBox)(({ theme }) => ({
   },
 }));
 
-const UserGrid: FC = () => {
+const ApartmentGrid: FC = () => {
   // change navbar title
-  useTitle("User Grid");
+  useTitle("Apartamentos");
 
   const navigate = useNavigate();
-  const handleAddUser = () => navigate("/dashboard/add-user");
+  const handleAddApar = () => navigate("/dashboard/add-user");
   const [apartments, setApartments] =
       useState<Apartment[]>([]);
 
@@ -42,12 +42,6 @@ const UserGrid: FC = () => {
 
   return (
     <Box pt={2} pb={4}>
-      <StyledFlexBox>
-        <SearchInput placeholder="Search user..." />
-        <Button variant="contained" onClick={handleAddUser}>
-          Add New User
-        </Button>
-      </StyledFlexBox>
 
       <Grid container spacing={3}>
         {apartments?.map((appt, index) => (
@@ -62,4 +56,4 @@ const UserGrid: FC = () => {
 
 
 
-export default UserGrid;
+export default ApartmentGrid;

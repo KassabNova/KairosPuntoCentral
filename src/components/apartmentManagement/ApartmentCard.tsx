@@ -13,7 +13,7 @@ export interface Apartment {
   id: number
   roomNumber: string
   floor: string
-  user: User
+  user: User[]
 }
 
 
