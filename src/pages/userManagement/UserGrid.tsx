@@ -34,7 +34,7 @@ const UserGrid: FC = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:8080/apartments/')
+    fetch('http://192.168.0.100:8080/apartments/')
         .then(response => response.json())
         .then((result) => { setApartments(result as Apartment[]); })
         .catch(error => console.error(error));
