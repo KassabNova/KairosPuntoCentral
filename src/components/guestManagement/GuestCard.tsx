@@ -30,7 +30,7 @@ const GuestCard: FC<GuestCardProps> = ({guest}) => {
                     flexDirection: "column",
                     marginTop: 5,
                 }}>
-                <H4 color="text.disabled" fontWeight={500}>Apartamento #: </H4>
+                <H4 color="text.disabled" fontWeight={500}>Departamento #: </H4>
                 <H1>{guest.firstName}</H1>
             </Box>
         </Card>

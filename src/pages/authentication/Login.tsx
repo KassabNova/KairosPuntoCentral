@@ -57,7 +57,7 @@ const Login: FC = () => {
           .then(() => {
             setLoading(false);
             toast.success("You Logged In Successfully test");
-            navigate("/dashboard");
+            navigate("/");
           })
           .catch((error) => {
             setError(error.message);
@@ -86,30 +86,11 @@ const Login: FC = () => {
             <img src="/static/logo/logo.svg" width="100%" alt="Uko Logo" />
           </Box>
           <H1 fontSize={24} fontWeight={700}>
-            Sign In to Uko
+            Bienvenido a Punto Central
           </H1>
         </FlexBox>
 
         <FlexBox justifyContent="space-between" flexWrap="wrap" my="1rem">
-          <SocialIconButton
-            // onClick={loginWithGoogle}
-            startIcon={<GoogleIcon sx={{ mr: 1 }} />}
-          >
-            Sign in with Google
-          </SocialIconButton>
-          <SocialIconButton
-            // onClick={loginWithFacebook}
-            startIcon={<FacebookIcon sx={{ mr: 1 }} />}
-          >
-            Sign in with Facebook
-          </SocialIconButton>
-
-          <Divider sx={{ my: 3, width: "100%", alignItems: "flex-start" }}>
-            <H3 color="text.disabled" px={1}>
-              Or
-            </H3>
-          </Divider>
-
           <form noValidate onSubmit={handleSubmit} style={{ width: "100%" }}>
             <FlexBox justifyContent="space-between" flexWrap="wrap">
               <TextFieldWrapper>
@@ -146,17 +127,6 @@ const Login: FC = () => {
             </FlexBox>
 
             <FlexBox mt={2} alignItems="center" justifyContent="space-between">
-              <FormControlLabel
-                control={
-                  <Switch
-                    name="remember"
-                    checked={values.remember}
-                    onChange={handleChange}
-                  />
-                }
-                label="Remember Me"
-                sx={{ "& .MuiTypography-root": { fontWeight: 600 } }}
-              />
               <Link to="/forget-password">
                 <Small color="secondary.red">Forgot Password?</Small>
               </Link>
@@ -188,13 +158,6 @@ const Login: FC = () => {
               )}
             </Box>
           </form>
-
-          <Small margin="auto" mt={3} color="text.disabled">
-            Don't have an account?{" "}
-            <Link to="/register">
-              <Small color="primary.main">Create an account</Small>
-            </Link>
-          </Small>
         </FlexBox>
       </Card>
     </FlexBox>

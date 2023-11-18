@@ -34,7 +34,7 @@ const ApartmentGrid: FC = () => {
 
 
   useEffect(() => {
-    fetch('http://192.168.0.100:8080/apartments/')
+    fetch('https://192.168.0.100:8443/apartments/')
         .then(response => response.json())
         .then((result) => { setApartments(result as Apartment[]); })
         .catch(error => console.error(error));

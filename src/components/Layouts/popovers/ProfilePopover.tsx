@@ -85,13 +85,7 @@ const ProfilePopover: FC = () => {
           <StyledSmall
             onClick={() => handleMenuItem("/dashboard/user-profile")}
           >
-            Set Status
-          </StyledSmall>
-
-          <StyledSmall
-            onClick={() => handleMenuItem("/dashboard/user-profile")}
-          >
-            Profile & Account
+            Perfil
           </StyledSmall>
 
           <Divider sx={{ my: 1 }} />
@@ -102,7 +96,7 @@ const ProfilePopover: FC = () => {
               toast.error("You Logout Successfully");
             }}
           >
-            Sign Out
+            Salir
           </StyledSmall>
         </Box>
       </PopoverLayout>

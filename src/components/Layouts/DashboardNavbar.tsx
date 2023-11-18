@@ -1,6 +1,6 @@
 import {
   AppBar,
-  Box,
+  Box, ListItemButton,
   styled,
   Theme,
   Toolbar,
@@ -46,6 +46,11 @@ const ToggleIcon = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
 }));
 
+const StyledListItemButton = styled(ListItemButton)(() => ({
+  justifyContent: "center",
+  "&:hover": { backgroundColor: "transparent" },
+}));
+
 // root component
 const DashboardNavbar: FC<DashboardNavBarProps> = ({
   setShowMobileSideBar,
@@ -73,7 +78,6 @@ const DashboardNavbar: FC<DashboardNavBarProps> = ({
             />
           </Box>
 
-          <LanguagePopover />
           <ProfilePopover />
         </StyledToolBar>
       </DashboardNavbarRoot>
@@ -84,9 +88,9 @@ const DashboardNavbar: FC<DashboardNavBarProps> = ({
     <DashboardNavbarRoot position="sticky">
       <StyledToolBar>
         <Box>
-          <ToggleIcon />
-          <ToggleIcon />
-          <ToggleIcon />
+          <StyledListItemButton disableRipple>
+            <img src="/static/logo/logo.svg" alt="UKO Logo" width={25} />
+          </StyledListItemButton>
         </Box>
 
         <H2
@@ -103,9 +107,8 @@ const DashboardNavbar: FC<DashboardNavBarProps> = ({
 
         {upSm && (
           <>
-            <LanguagePopover />
-            <NotificationsPopover />
-            <ServicePopover />
+            {/*<NotificationsPopover />*/}
+            {/*<ServicePopover />*/}
           </>
         )}
         <ProfilePopover />

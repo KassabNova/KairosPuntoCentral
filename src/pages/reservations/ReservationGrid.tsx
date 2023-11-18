@@ -41,7 +41,7 @@ const Test = (props: any) => {
                 console.info(error);
               }
             }}
-            constraints={ {facingMode: 'rear'} }
+            constraints={ {facingMode: 'environment'} }
         />
           <p>{data}</p>
       </>
@@ -60,7 +60,7 @@ const ReservationGrid: FC = () => {
   const [reservations, setReservations] =
       useState<Reservation[]>([]);
 
-  const url = "http://192.168.0.100:8080/reservations/apartment/"+apartmentId;
+  const url = "https://192.168.0.100:8443/reservations/apartment/"+apartmentId;
 
   useEffect(() => {
     fetch(url)
